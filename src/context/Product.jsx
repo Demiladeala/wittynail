@@ -8,8 +8,8 @@ const Product = ({ children }) => {
   const [bannerData, setBannerData] = useState(null);
 
   useEffect(() => {
-    const productApi = "https://www.wittynailtip.com/backend/product.php";
-    const bannerApi = "https://www.wittynailtip.com/backend/banners.php";
+    const productApi = "https://talk-bizz.com/backend/backend/product.php";
+    const bannerApi = "https://talk-bizz.com/backend/backend/banners.php";
     async function fetchData() {
       try {
         const result = await fetchApi(productApi);

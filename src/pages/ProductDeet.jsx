@@ -33,7 +33,7 @@ const ProductDeet = () => {
       try {
         const response = await sendApi(
           { product_id: productId },
-          "https://www.wittynailtip.com/backend/reviews.php",
+          "https://talk-bizz.com/backend/backend/reviews.php",
         );
 
         if (response.data.success) {
@@ -48,7 +48,7 @@ const ProductDeet = () => {
   }, [productId]);
 
   useEffect(() => {
-    const prodApi = "https://www.wittynailtip.com/backend/product-info.php";
+    const prodApi = "https://talk-bizz.com/backend/backend/product-info.php";
     const prodId = { product_id: productId };
     async function fetchData() {
       try {

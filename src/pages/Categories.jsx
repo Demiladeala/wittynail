@@ -15,7 +15,7 @@ const Categories = () => {
     const fetchData = async () => {
       try {
         const response = await axios.post(
-          "https://www.wittynailtip.com/backend/category.php",
+          "https://talk-bizz.com/backend/backend/category.php",
           {
             category: category,
           },

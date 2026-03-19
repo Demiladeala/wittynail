@@ -27,7 +27,8 @@ const Saved = () => {
   }, [favError]);
 
   const deleteSaved = async () => {
-    const deleteSavedApi = "https://www.wittynailtip.com/backend/empty-fav.php";
+    const deleteSavedApi =
+      "https://talk-bizz.com/backend/backend/empty-fav.php";
     try {
       const result = await fetchApi(deleteSavedApi);
       if (result.data.success) {

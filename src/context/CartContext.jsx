@@ -16,7 +16,7 @@ const CartContext = ({ children }) => {
   const [userAvailable, setUserAvailable] = useState(false);
 
   const fetchCartItems = useCallback(() => {
-    const fetchCartApi = "https://www.wittynailtip.com/backend/cart.php";
+    const fetchCartApi = "https://talk-bizz.com/backend/backend/cart.php";
     async function fetchData() {
       try {
         const result = await fetchApi(fetchCartApi);
@@ -39,7 +39,7 @@ const CartContext = ({ children }) => {
   }, [fetchCartItems]);
 
   const addCartApi = async (id, amount, color, size) => {
-    const atcApi = "https://www.wittynailtip.com/backend/add-to-cart.php";
+    const atcApi = "https://talk-bizz.com/backend/backend/add-to-cart.php";
     const cartProd = {
       product_id: id,
       quantity: amount,
@@ -123,7 +123,7 @@ const CartContext = ({ children }) => {
 
   const deleteCartItem = async (cartId) => {
     const cartDel = { cart_id: cartId };
-    const dcApi = "https://www.wittynailtip.com/backend/del-cart.php";
+    const dcApi = "https://talk-bizz.com/backend/backend/del-cart.php";
     try {
       setDeletingCartItem(true);
       const newCart = cart.filter((item) => item.cart_id !== cartId);
@@ -150,7 +150,7 @@ const CartContext = ({ children }) => {
 
   // Function to fetch saved items
   const fetchSavedItems = async () => {
-    const saveFetchApi = "https://www.wittynailtip.com/backend/fav.php";
+    const saveFetchApi = "https://talk-bizz.com/backend/backend/fav.php";
     try {
       const result = await fetchApi(saveFetchApi);
       if (result.data.success) {
@@ -170,7 +170,7 @@ const CartContext = ({ children }) => {
       // Check if item is not already saved
       if (!savedItems.some((savedItem) => savedItem.id === item.id)) {
         const prod = { product_id: item.id };
-        const atsApi = "https://www.wittynailtip.com/backend/add-to-fav.php";
+        const atsApi = "https://talk-bizz.com/backend/backend/add-to-fav.php";
 
         try {
           const result = await sendApi(prod, atsApi);
@@ -190,7 +190,7 @@ const CartContext = ({ children }) => {
       const itemToUnsave = savedItems.find((e) => e.id === item.id);
       if (itemToUnsave) {
         const itemPrep = { fav_id: itemToUnsave.fav_id };
-        const delFavApi = "https://www.wittynailtip.com/backend/del-fav.php";
+        const delFavApi = "https://talk-bizz.com/backend/backend/del-fav.php";
 
         try {
           const result = await sendApi(itemPrep, delFavApi);

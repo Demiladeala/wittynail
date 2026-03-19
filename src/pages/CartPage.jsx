@@ -34,7 +34,7 @@ const CartPage = () => {
       setIsCouponLoading(true);
       const result = await sendApi(
         { code: couponCode },
-        "https://www.wittynailtip.com/backend/valid-coupon.php",
+        "https://talk-bizz.com/backend/backend/valid-coupon.php",
       );
 
       if (result.data && result.data.success) {
@@ -56,7 +56,7 @@ const CartPage = () => {
 
   const payOrder = async () => {
     const payPend = { pay: "pay" };
-    const payApi = "https://www.wittynailtip.com/backend/pend-order.php";
+    const payApi = "https://talk-bizz.com/backend/backend/pend-order.php";
     try {
       setIsLoading(true);
       const result = await sendApi(payPend, payApi);
@@ -84,7 +84,7 @@ const CartPage = () => {
   const total = (subtotal - discountAmount).toFixed(2);
 
   useEffect(() => {
-    const stripePay = "https://www.wittynailtip.com/backend/pay-api.php";
+    const stripePay = "https://talk-bizz.com/backend/backend/pay-api.php";
     if (pay) {
       async function fetchData() {
         try {
@@ -106,7 +106,7 @@ const CartPage = () => {
   }, [pay]);
 
   const emptyCart = async () => {
-    const emptyCart = "https://www.wittynailtip.com/backend/empty-cart.php";
+    const emptyCart = "https://talk-bizz.com/backend/backend/empty-cart.php";
     try {
       const result = await fetchApi(emptyCart);
       if (result.data.success) {

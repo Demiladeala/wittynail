@@ -15,7 +15,7 @@ const OrderIndex = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const profileApi = "https://www.wittynailtip.com/backend/profile.php";
+    const profileApi = "https://talk-bizz.com/backend/backend/profile.php";
     async function fetchData() {
       try {
         const result = await fetchApi(profileApi);
@@ -33,7 +33,7 @@ const OrderIndex = () => {
 
   useEffect(() => {
     const order = { order_id: orderId };
-    const orderApi = "https://www.wittynailtip.com/backend/order-info.php";
+    const orderApi = "https://talk-bizz.com/backend/backend/order-info.php";
     async function fetchData() {
       try {
         const result = await sendApi(order, orderApi);

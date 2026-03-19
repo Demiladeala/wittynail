@@ -42,7 +42,7 @@ const Welcome = () => {
       setIsLoading(true);
       const result = await submitData(
         data,
-        "https://www.wittynailtip.com/backend/signup.php",
+        "https://talk-bizz.com/backend/backend/signup.php",
       );
       if (result.data.success) {
         toast.success(result.data.message);
@@ -68,7 +68,7 @@ const Welcome = () => {
       setUpdate(true);
       const result = await submitData(
         data,
-        "https://www.wittynailtip.com/backend/login.php",
+        "https://talk-bizz.com/backend/backend/login.php",
       );
       if (result.data.success) {
         toast.success(result.data.message);

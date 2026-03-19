@@ -15,7 +15,7 @@ const EditProfile = () => {
   const [unauthorized, setUnauthorized] = useState(false);
 
   useEffect(() => {
-    const profileApi = "https://www.wittynailtip.com/backend/profile.php";
+    const profileApi = "https://talk-bizz.com/backend/backend/profile.php";
     async function fetchData() {
       setLoad(true);
       try {
@@ -59,7 +59,7 @@ const EditProfile = () => {
       billing: billing_address,
     };
     const updateProfileApi =
-      "https://www.wittynailtip.com/backend/edit-profile.php";
+      "https://talk-bizz.com/backend/backend/edit-profile.php";
     try {
       const result = await sendApi(updatedProfile, updateProfileApi);
       if (result.data.success) {
@@ -76,7 +76,7 @@ const EditProfile = () => {
 
   const Logout = async (e) => {
     e.preventDefault();
-    const logoutApi = "https://www.wittynailtip.com/backend/logout.php";
+    const logoutApi = "https://talk-bizz.com/backend/backend/logout.php";
     try {
       const result = await fetchApi(logoutApi);
       if (result.data.success) {

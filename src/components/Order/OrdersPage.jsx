@@ -13,7 +13,7 @@ const OrdersPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const moApi = "https://www.wittynailtip.com/backend/my-orders.php";
+    const moApi = "https://talk-bizz.com/backend/backend/my-orders.php";
     async function fetchData() {
       try {
         const result = await sendApi(undefined, moApi);
